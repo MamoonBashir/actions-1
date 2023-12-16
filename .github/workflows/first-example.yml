@@ -8,7 +8,7 @@ jobs:
         
         steps:
         - name: Checkout to the repo
-          uses: action/checkout@v4  ##instead of run, we use "uses"
+          uses: actions/checkout@v4  ##instead of run, we use "uses"
 
 
         - name: Welcome Message
