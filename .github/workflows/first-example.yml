@@ -1,0 +1,17 @@
+name:   my-first-workflow
+
+on: push    ##WorkFlow needs to trigger on push event
+
+jobs:
+    first_job: ## Name of job. e.g, test, build, deploy etc
+        runs-on: ubuntu-latest ## runs on virtual environment
+        steps:
+
+        - name: Welcome Message
+          run:  echo "My first github action script"
+        
+        - name: List files
+          run:  ls -l
+
+        - name: Read Files
+          run:  cat README.md
