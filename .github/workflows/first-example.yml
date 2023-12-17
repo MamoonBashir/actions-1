@@ -23,8 +23,8 @@ jobs:
            cat README.md
            echo "My first github action script"
 
-        - name: Check if file exist
-          run:  grep -i "cow" cow.txt
+        ##- name: Check if file exist
+          ##run:  grep -i "cow" cow.txt
 
         - name: Reading the cow file.
           run:  cat cow.txt
@@ -33,7 +33,7 @@ jobs:
           run:  | ## Pipe is used to mention multiple commands
             ls -ltra
             cat README.md
-            
+
         - name: Executing 3rd party library (Generate ASCII Artwork)
           run: cowsay -f dragon "Run for cover, i am a dragon" >> dragon.txt ##Cosway is 3rd party library. -f is used to change animal
 
