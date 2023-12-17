@@ -15,13 +15,7 @@ jobs:
   
 
         - name: Running 3rd party library & generate ASCII Artwork
-          run:  cowsay -f dragon "Running 3rd party library" >> cow.txt ##Cowsay is 3rd party library. -f is used to change the animal to dragon
-        
-        - name: List files
-          run:  | 
-           ls -ltrh
-           cat README.md
-           echo "My first github action script"
+          run:  cowsay -f dragon "Running 3rd party library" >> cow.txt ##Cowsay is 3rd party library. -f is used to change the animal to dragon.
 
         - name: Check if file exist
           run:  grep -i "cow" cow.txt
@@ -33,9 +27,3 @@ jobs:
           run:  | ## Pipe is used to mention multiple commands
             ls -ltra
             cat README.md
-            
-        - name: Executing 3rd party library (Generate ASCII Artwork)
-          run: cowsay -f dragon "Run for cover, i am a dragon" >> dragon.txt ##Cosway is 3rd party library. -f is used to change animal
-
-        ##- name: Read Files
-          ##run:  cat README.md
