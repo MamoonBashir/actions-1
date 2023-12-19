@@ -41,3 +41,6 @@ jobs:
 
     - name: deploying
       run:  echo "Deploying"
+
+    - name: end
+      run:  pwd
