@@ -10,6 +10,9 @@ jobs:
         - name: Checkout to the repo
           uses: actions/checkout@v4  ##instead of run, we use "uses"
 
+        - name: Giving permission
+          run:  chmod +x shell_script.sh
+          
         - name: Running shell scriptig
           run:  ./shell_script.sh
 
