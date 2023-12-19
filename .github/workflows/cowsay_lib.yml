@@ -5,7 +5,7 @@ on:
 
 
 jobs:
-  multiple_jobs:
+  build_jobs:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,7 @@ jobs:
       run:  sleep 30
 
   test_job:
+    needs: build_jobs
     runs-on:  ubuntu_latest
 
     steps:
@@ -33,6 +34,7 @@ jobs:
       run:  grep -i "dragon"  dragon.txt
 
   deploy_job:
+    needs:  test_job
     runs-on: ubuntu-latest
 
     steps:
