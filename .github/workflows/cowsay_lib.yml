@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: checking-out repo
-      run:  actions/checkout@v4.0
+      uses:  actions/checkout@v4.0
 
     - name: installing cowsay program
       run:  sudo apt-get install cowsay -y
