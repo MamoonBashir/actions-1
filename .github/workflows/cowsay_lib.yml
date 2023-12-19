@@ -24,7 +24,7 @@ jobs:
 
   test_job:
     needs: build_jobs
-    runs-on:  ubuntu_latest
+    runs-on:  ubuntu-latest
 
     steps:
     - name: sleep for 10 sec
